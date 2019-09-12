@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm i"
+    "dist": "rm -rf dist && mkdir dist && rsync -rv * dist --exclude ./dist"
   },
   "author": "",
   "license": "ISC",
