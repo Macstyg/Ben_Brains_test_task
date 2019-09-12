@@ -1,0 +1,25 @@
+@blue-color: #29B6F6;
+@black-border: 1px solid black;
+@dark-blue-color: #0D47A1;
+
+.wrapper {
+  width: 860px;
+  margin: 0 auto;
+}
+
+.w100 {
+  width: 100%;
+}
+
+md-slider {
+  .md-track-fill {
+    background-color: @dark-blue-color !important;
+  }
+
+  .md-thumb {
+    &:after {
+      background-color: @dark-blue-color;
+      border-color: @dark-blue-color;
+    }
+  }
+}

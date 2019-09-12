@@ -1,0 +1,65 @@
+<div class="add-more-stuff">
+    <div class="add-more-stuff__title">
+        <h3>Add more stuff?</h3>
+        <div class="description">
+            <div>Use the slider to add extra users.</div>
+            Your monthly subscription is automatically calculated above. Your volume discount is showing at right.
+        </div>
+    </div>
+
+    <div class="add-more-stuff__content">
+        <div class="additional-stuff">
+            <div class="additional-stuff__techs">
+                <div class="range">
+                    <div class="range__title">Techs</div>
+                    <div class="range__slider">
+                        <md-slider ng-model="subscriptionPlan.techCount"
+                                   ng-change="updateSubscriptionPrice()"
+                                   step="1"
+                                   min="1"
+                                   max="10"></md-slider>
+                        <div class="scale">
+                            <span>1></span>
+                            <span>10</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <strong>Tech users</strong> have full mobile access to all services
+                </div>
+            </div>
+
+            <div class="additional-stuff__admins">
+                <div class="range">
+                    <div class="range__title">Admins</div>
+                    <div class="range__slider">
+                        <md-slider ng-model="subscriptionPlan.adminCount"
+                                   ng-change="updateSubscriptionPrice()"
+                                   step="1"
+                                   min="1"
+                                   max="10"></md-slider>
+                        <div class="scale">
+                            <span>1></span>
+                            <span>10</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <strong>Admin users</strong> have access to customer dataset\billing
+                </div>
+            </div>
+        </div>
+        <div class="discount">
+            <div class="w100" ng-if="!isDiscountNotificationMessageShown">
+                <div class="discount__title">Discount</div>
+                <div class="discount__amount">
+                    {{discount.percentage}} ({{discount.amount}})
+                </div>
+            </div>
+
+            <div class="w100 discount__notification" ng-if="isDiscountNotificationMessageShown">
+                Please contact us for enterprise discounts
+            </div>
+        </div>
+    </div>
+</div>

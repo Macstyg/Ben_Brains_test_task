@@ -1,0 +1,56 @@
+@import "_main";
+
+.subscription-plan {
+  &__plans {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to bottom, rgba(173, 216, 230, 0.5) 80%, transparent 0);
+
+    subscription-plan-card {
+      position: relative;
+      cursor: pointer;
+      flex: 1;
+      max-width: 286px;
+      outline: none;
+    }
+  }
+
+  &__title {
+    border-bottom: 2px solid @blue-color;
+
+    h4 {
+      margin-bottom: 5px;
+      padding-left: 10px;
+    }
+  }
+
+  &__notification {
+    padding-left: 10px;
+    margin: 15px 0;
+    font-size: 12px;
+  }
+
+  &__more-stuff {
+    margin-top: 15px;
+  }
+
+  &__action-buttons {
+    margin-top: 10px;
+
+    .md-primary {
+      background-color: @blue-color !important;
+    }
+  }
+
+  .is-disabled {
+    &:after {
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      background: rgba(0, 0, 0, .5);
+    }
+  }
+}

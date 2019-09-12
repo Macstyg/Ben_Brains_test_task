@@ -1,0 +1,27 @@
+<div class="subscription-plan-card">
+    <md-card>
+        <md-card-content class="subscription-plan-card-content">
+            <div class="subscription-plan-card-content__type">
+                {{subscriptionPlan.type}}
+                <div class="wave"></div>
+            </div>
+
+            <div class="subscription-plan-card-content__description">
+                {{subscriptionPlan.description}}
+            </div>
+
+            <div class="subscription-plan-card-content__price">
+                <div class="currency">&#36;</div>
+                <div class="amount">{{subscriptionPlan.price}}</div>
+                <div class="period">/mo</div>
+            </div>
+        </md-card-content>
+
+        <md-card-footer>
+            <span ng-if="subscriptionPlan.labCount">{{subscriptionPlan.labCount}}x LAB</span>
+            <span ng-if="subscriptionPlan.techCount">{{subscriptionPlan.techCount}}x TECH</span>
+            <span ng-if="subscriptionPlan.adminCount">{{subscriptionPlan.adminCount}}x ADMIN</span>
+        </md-card-footer>
+    </md-card>
+</div>
+

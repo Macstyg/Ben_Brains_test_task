@@ -1,0 +1,25 @@
+<div class="subscription-plan">
+    <div class="subscription-plan__title">
+        <h4>CHOSE YOUR BASE SUBSCRIPTION</h4>
+    </div>
+    <div class="subscription-plan__notification">
+        You can add extra stuff after
+    </div>
+    <div class="subscription-plan__plans">
+        <subscription-plan-card ng-repeat="subscriptionPlan in subscriptionPlans"
+                                ng-class="{'is-disabled': selectedSubscriptionPlan && selectedSubscriptionPlan.type !== subscriptionPlan.type}"
+                                ng-click="selectSubscriptionPlan(subscriptionPlan.type)"
+                                subscription-plan="subscriptionPlan">
+        </subscription-plan-card>
+    </div>
+
+    <div class="subscription-plan__more-stuff"
+         ng-if="!isUpdated && (selectedSubscriptionPlan.type === 'FIELD' || selectedSubscriptionPlan.type === 'PRO')">
+        <add-more-stuff subscription-plan="selectedSubscriptionPlan"></add-more-stuff>
+    </div>
+
+    <div class="subscription-plan__action-buttons">
+        <md-button class="md-raised md-primary" ng-click="updateSubscription()">Update Subscription</md-button>
+        <md-button class="md-raised" ng-click="cancelSubscription()">Cancel Subscription</md-button>
+    </div>
+</div>
