@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Subscription</title>
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
-    <link rel="stylesheet/less" href="resources/_subscription-plans.less">
-    <link rel="stylesheet/less" href="resources/_subscription-plan-card.less">
-    <link rel="stylesheet/less" href="resources/_add-more-stuff.less">
-    <link rel="stylesheet/less" href="resources/_main.less">
+    <link rel="stylesheet/less" type="text/css" href="resources/_subscription-plans.less">
+    <link rel="stylesheet/less" type="text/css" href="resources/_subscription-plan-card.less">
+    <link rel="stylesheet/less" type="text/css" href="resources/_add-more-stuff.less">
+    <link rel="stylesheet/less" type="text/css" href="resources/_main.less">
 
     <script src="node_modules/less/dist/less.min.js"></script>
     <script src="node_modules/lodash/lodash.min.js"></script>
@@ -19,13 +20,16 @@
     <script src="scripts/subscription-plan/subscription-plan.module.js"></script>
     <script src="scripts/subscription-plan/subscription-plan.constant.js"></script>
     <script src="scripts/subscription-plan/components/add-more-stuff/add-more-stuff.directive.js"></script>
-    <script src="scripts/subscription-plan/components/subscription-plan-card/subscription-plan-card.directive.js"></script>
+    <script
+        src="scripts/subscription-plan/components/subscription-plan-card/subscription-plan-card.directive.js"></script>
     <script src="scripts/subscription-plan/subscription-plan.directive.js"></script>
     <script src="index.js"></script>
 </head>
+
 <body>
-<div ng-app="mainApp" class="wrapper">
-    <subscription-plan></subscription-plan>
-</div>
+    <div ng-app="mainApp" class="wrapper">
+        <subscription-plan></subscription-plan>
+    </div>
 </body>
+
 </html>
