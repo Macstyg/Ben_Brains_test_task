@@ -50,11 +50,13 @@
                 };
 
                 function selectSubscriptionPlan(subscriptionPlanType) {
-                    if (!_.isEqual($scope.subscriptionPlans, SUBSCRIPTION_PLAN)) {
-                        $scope.subscriptionPlans = _.cloneDeep(SUBSCRIPTION_PLAN.defaultSubscriptionPlans);
-                    }
+                    if (!$scope.selectedSubscriptionPlan || $scope.selectedSubscriptionPlan.type !== subscriptionPlanType) {
+                        if (!_.isEqual($scope.subscriptionPlans, SUBSCRIPTION_PLAN)) {
+                            $scope.subscriptionPlans = _.cloneDeep(SUBSCRIPTION_PLAN.defaultSubscriptionPlans);
+                        }
 
-                    $scope.selectedSubscriptionPlan = _.find($scope.subscriptionPlans, {type: subscriptionPlanType});
+                        $scope.selectedSubscriptionPlan = _.find($scope.subscriptionPlans, {type: subscriptionPlanType});
+                    }
                 }
 
 
