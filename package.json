@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dist": "rm -rf dist && mkdir dist && rsync -rv * dist --exclude ./dist"
   },
   "author": "",
   "license": "ISC",
