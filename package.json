@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dist": "rm -rf dist && mkdir dist && rsync -rv * dist --exclude ./dist"
+    "dist": "rm -rf dist && mkdir dist && rsync -rv * dist --exclude ./dist",
+    "test": "karma start"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +17,14 @@
     "angular-messages": "^1.7.8",
     "less": "^3.10.3",
     "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.7.8",
+    "jasmine-core": "^3.4.0",
+    "karma": "^4.3.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-ng-html2js-preprocessor": "^1.0.0",
+    "ng-html2js": "^3.0.0"
   }
 }
