@@ -16,7 +16,7 @@
     "angular-material": "^1.1.20",
     "angular-messages": "^1.7.8",
     "less": "^3.10.3",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "angular-mocks": "^1.7.8",
